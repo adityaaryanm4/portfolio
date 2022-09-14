@@ -14,10 +14,14 @@
 
                 a {
                     transition: 0.5s;
+                    &.true{
+                        color: #ff004f;
+                    }
 
                     &:hover {
                         color: #ff004f;
                     }
+                    
                 }
             }
         }
@@ -77,21 +81,22 @@
 
     .icons {
         display: flex;
+        justify-content: center;
         gap: 15px;
         flex-wrap: wrap;
         width: 650px;
 
         .skill-icon {
             background-color: lightgray;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
 
             img {
-                width: 100px;
+                width: 70px;
             }
         }
     }

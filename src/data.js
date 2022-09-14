@@ -64,4 +64,8 @@ export const skillUrls = [
         id:11,
         url:"https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_netlify_icon_130354.png"
     },
+    {
+        id:12,
+        url:"https://cdn.icon-icons.com/icons2/936/PNG/512/github-logo_icon-icons.com_73546.png"
+    },
 ]
