@@ -11,6 +11,14 @@
 
             .menu-item {
                 cursor: pointer;
+
+                a {
+                    transition: 0.5s;
+
+                    &:hover {
+                        color: #ff004f;
+                    }
+                }
             }
         }
     }
@@ -42,6 +50,21 @@
         img {
             width: 300px;
             border-radius: 50%;
+            border: 5px solid #ff004f;
+        }
+
+        .dndCVbtn {
+            margin-top: 20px;
+            background-color: #ff004f;
+            padding: 10px;
+            border-radius: 10px;
+            transition: 0.5s;
+
+            &:hover {
+                background-color: white;
+                color: black;
+
+            }
         }
     }
 }
@@ -56,6 +79,7 @@
         display: flex;
         gap: 15px;
         flex-wrap: wrap;
+        width: 650px;
 
         .skill-icon {
             background-color: lightgray;
@@ -134,11 +158,38 @@
     }
 }
 
-.contact{
+.contact {
     padding: 100px;
+    display: flex;
+    justify-content: center;
+
+    .links {
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+
+            a {
+                transition: 0.5s;
+
+                &:hover {
+                    color: #ff004f;
+                }
+            }
+        }
+    }
 }
-.about{
+
+.about {
     padding: 100px;
+    text-align: center;
+
+    p {
+        margin: 20px auto;
+        width: 50%;
+        line-height: 1.6;
+    }
 }
 
 .red {
