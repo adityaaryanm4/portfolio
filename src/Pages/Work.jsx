@@ -1,18 +1,18 @@
 import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import urls from "../data"
-import { Link } from 'react-router-dom';
+import {urls} from "../data"
 
-const Container = ({ url }) => {
+const Container = ({ item }) => {
   return (
     <div className="container">
-      <img src={url} alt="work" />
+      <img src={item.url} alt="work" />
       <div className="info">
-        <div className="icon"><GitHubIcon style={{ background: "transparent", fill: "black" }} /></div>
-        <Link to="https://karashop.netlify.app/"><div className="icon">
-          <SearchIcon style={{ background: "transparent", fill: "black" }} />
-        </div></Link>
+
+        <a href={item.git} target="_main"><div className="icon"><GitHubIcon style={{ fill: "black" }} /></div></a>
+
+        <a href={item.web} target="_main"><div className="icon"><SearchIcon style={{ fill: "black" }} /></div></a>
+
       </div>
     </div>
   )
@@ -21,7 +21,7 @@ const Container = ({ url }) => {
 const Work = () => {
   return (
     <div className="work">
-      {urls.map(item => <Container key={item.id} url={item.url} />)}
+      {urls.map(item => <Container key={item.id} item={item} />)}
     </div>
   )
 }

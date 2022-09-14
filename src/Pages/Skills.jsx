@@ -1,19 +1,21 @@
 import React from 'react'
+import {skillUrls} from "../data"
+
+const SkillIcon = ({url}) => {
+  return (
+    <div className="skill-icon">
+      <img src={url} alt="" />
+    </div>
+  )
+}
 
 const Skills = () => {
   return (
     <div className="skills">
 
       <div className="icons">
-        <div className="skill-icon">
-          <img src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5352-html5_102567.png" alt="" />
-          </div>
-        <div className="skill-icon">
-          <img src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5352-html5_102567.png" alt="" />
-          </div>
-        <div className="skill-icon">
-          <img src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5352-html5_102567.png" alt="" />
-          </div>
+        {skillUrls.map(item=><SkillIcon key={item.id} url={item.url}/>)}
+        
       </div>
 
     </div>
