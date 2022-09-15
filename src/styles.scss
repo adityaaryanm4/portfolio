@@ -1,27 +1,110 @@
+@mixin mobile {
+    @media screen and (max-width:480px) {
+        @content
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width:768px) {
+        @content
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width:1200px) {
+        @content
+    }
+}
+
 .navbar {
     padding: 20px 100px;
+
+    @include mobile {
+        padding: 20px 0;
+    }
 
     .wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        @include mobile {
+            justify-content: center;
+        }
+
+        .toggle-menu-icon {
+            display: none;
+
+
+            &.cross {
+                position: absolute;
+                top: 26px;
+                left: 20px;
+            }
+
+            &.bar {
+                position: absolute;
+                right: 20px;
+            }
+
+            @include mobile {
+                display: block;
+                font-size: 30px;
+            }
+        }
 
         .menu {
             display: flex;
             gap: 25px;
+            position: relative;
+
+            @include mobile {
+                position: fixed;
+                top: 0;
+                z-index: 2;
+                height: 100vh;
+                width: 200px;
+                background-color: #ff004f;
+                flex-direction: column;
+                padding-top: 10px;
+                transition: right 0.5s;
+
+                &.off {
+                    right: -200px;
+                }
+
+                &.onn {
+                    right: 0;
+                }
+            }
 
             .menu-item {
                 cursor: pointer;
 
                 a {
-                    transition: 0.5s;
-                    &.true{
+                    transition: 0.3s;
+
+                    &.active {
                         color: #ff004f;
                     }
 
                     &:hover {
                         color: #ff004f;
                     }
-                    
+
+                    @include mobile {
+
+                        &.active,
+                        &:hover {
+                            color: white;
+                        }
+                    }
+
+                }
+
+                @include mobile {
+                    margin-left: 20px;
                 }
             }
         }
@@ -37,17 +120,29 @@
         align-items: center;
         justify-content: center;
 
+        @include mobile {
+            padding: 100px 20px;
+        }
+
         .intro {
             text-align: center;
 
             p {
                 color: lightgray;
                 font-size: 20px;
+
+                @include mobile {
+                    font-size: 15px;
+                }
             }
 
             h1 {
                 font-size: 45px;
                 margin-top: 30px;
+
+                @include mobile {
+                    font-size: 30px;
+                }
             }
         }
 
@@ -55,6 +150,11 @@
             width: 300px;
             border-radius: 50%;
             border: 5px solid #ff004f;
+
+            @include mobile {
+                width: 150px;
+                border: 3px solid #ff004f;
+            }
         }
 
         .dndCVbtn {
@@ -63,6 +163,11 @@
             padding: 10px;
             border-radius: 10px;
             transition: 0.5s;
+
+            @include mobile {
+                padding: 8px;
+                font-size: 13px;
+            }
 
             &:hover {
                 background-color: white;
@@ -190,10 +295,18 @@
     padding: 100px;
     text-align: center;
 
+    @include mobile {
+        padding: 100px 20px;
+    }
+
     p {
         margin: 20px auto;
         width: 50%;
         line-height: 1.6;
+
+        @include mobile {
+            width: 100%;
+        }
     }
 }
 
