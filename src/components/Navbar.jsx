@@ -1,5 +1,5 @@
-import React, { useState,useEffect } from 'react'
-import { NavLink ,useLocation} from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -8,12 +8,12 @@ const Navbar = () => {
     const [menubar, setMenubar] = useState("off")
     const location = useLocation()
 
-    useEffect(() => { 
-        setMenubar("off") 
+    useEffect(() => {
+        setMenubar("off")
     }, [location])
 
     return (
-    
+
         <div className="navbar">
 
             <div className="wrapper">

@@ -187,12 +187,21 @@
     justify-content: center;
     padding: 100px;
 
+    @include mobile {
+        padding: 100px 20px;
+    }
+
     .icons {
         display: flex;
         justify-content: center;
         gap: 15px;
         flex-wrap: wrap;
         width: 650px;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .skill-icon {
             background-color: lightgray;
@@ -226,18 +235,23 @@
     flex-wrap: wrap;
 
     @include mobile {
+        padding: 100px 20px;
         flex-direction: column;
-        padding: 50px;
         align-items: center;
         gap: 25px;
     }
 
     .container {
         height: 200px;
-        width: 260px;
+        width: 290px;
         position: relative;
         border-radius: 10px;
         overflow: hidden;
+
+        @include mobile {
+            height: 180px;
+            width: 250px;
+        }
 
         img {
             width: 100%;
@@ -289,7 +303,10 @@
     padding: 100px;
     display: flex;
     justify-content: center;
-    @include mobile{
+
+    @include mobile {
+        padding: 100px 20px;
+        align-items: center;
     }
 
     .links {
@@ -305,8 +322,9 @@
                 &:hover {
                     color: #ff004f;
                 }
-                @include mobile{
-                    font-size: 10px;
+
+                @include mobile {
+                    font-size: 12px;
                 }
             }
         }
@@ -318,17 +336,25 @@
     text-align: center;
 
     @include mobile {
-        padding: 100px 40px;
+        padding: 100px 20px;
     }
 
     p {
         margin: 20px auto;
         width: 50%;
-        line-height: 1.6;
+        line-height: 2rem;
+        font-weight: 400;
+        font-size: 1.2rem;
 
         @include mobile {
-            width: 100%;
-            word-break: break-word;
+            width: 90%;
+            text-align: left;
+
+        }
+
+        span {
+            text-decoration: underline #f7d2b5 2px solid;
+            text-underline-offset: 8px;
         }
     }
 }
