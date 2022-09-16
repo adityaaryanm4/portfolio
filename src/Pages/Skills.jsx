@@ -1,10 +1,17 @@
 import React from 'react'
-import {skillUrls} from "../data"
+import { skillUrls } from "../data"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
-const SkillIcon = ({url}) => {
+const SkillIcon = ({ url }) => {
   return (
     <div className="skill-icon">
-      <img src={url} alt="" />
+      <LazyLoadImage
+        alt="skill"
+        src={url}
+        effect="blur"
+        placeholderSrc={url}
+      />
     </div>
   )
 }
@@ -14,8 +21,8 @@ const Skills = () => {
     <div className="skills">
 
       <div className="icons">
-        {skillUrls.map(item=><SkillIcon key={item.id} url={item.url}/>)}
-        
+        {skillUrls.map(item => <SkillIcon key={item.id} url={item.url} />)}
+
       </div>
 
     </div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Home = () => {
     return (
@@ -6,7 +8,12 @@ const Home = () => {
 
             <div className="wrapper">
 
-                <img src="https://i.postimg.cc/NFjhNfkv/pink-gradient-designify-modified.png" alt="avt" />
+                <LazyLoadImage
+                    alt="avt"
+                    src="https://i.postimg.cc/NFjhNfkv/pink-gradient-designify-modified.png"
+                    effect="blur"
+                    placeholderSrc="https://i.postimg.cc/NFjhNfkv/pink-gradient-designify-modified.png"
+                />
 
                 <div className="intro">
                     <h1>Hi, I'm <span className="red">Aditya</span></h1>

@@ -1,12 +1,22 @@
 import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import {urls} from "../data"
+import { urls } from "../data"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Container = ({ item }) => {
   return (
     <div className="container">
-      <img src={item.url} alt="work" />
+
+      <LazyLoadImage
+        alt="work"
+        src={item.url}
+        effect="blur"
+        placeholderSrc={item.url}
+        height="100%"
+      />
+
       <div className="info">
 
         <a href={item.git} target="_main"><div className="icon"><GitHubIcon style={{ fill: "black" }} /></div></a>

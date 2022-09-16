@@ -4,18 +4,6 @@
     }
 }
 
-@mixin tablet {
-    @media screen and (max-width:768px) {
-        @content
-    }
-}
-
-@mixin laptop {
-    @media screen and (max-width:1200px) {
-        @content
-    }
-}
-
 .navbar {
     padding: 20px 100px;
 
@@ -124,7 +112,7 @@
         justify-content: center;
 
         @include mobile {
-            padding: 100px 20px;
+            padding: 60px 20px;
         }
 
         .intro {
@@ -188,7 +176,7 @@
     padding: 100px;
 
     @include mobile {
-        padding: 100px 20px;
+        padding: 60px 20px;
     }
 
     .icons {
@@ -217,11 +205,17 @@
                 height: 100px;
             }
 
-            img {
-                width: 70px;
+            .lazy-load-image-background {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
 
-                @include mobile {
-                    width: 50px;
+                img {
+                    width: 70px;
+
+                    @include mobile {
+                        width: 50px;
+                    }
                 }
             }
         }
@@ -235,7 +229,7 @@
     flex-wrap: wrap;
 
     @include mobile {
-        padding: 100px 20px;
+        padding: 60px 20px;
         flex-direction: column;
         align-items: center;
         gap: 25px;
@@ -305,7 +299,7 @@
     justify-content: center;
 
     @include mobile {
-        padding: 100px 20px;
+        padding: 60px 20px;
         align-items: center;
     }
 
@@ -336,7 +330,7 @@
     text-align: center;
 
     @include mobile {
-        padding: 100px 20px;
+        padding: 60px 20px;
     }
 
     p {
