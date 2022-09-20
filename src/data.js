@@ -8,13 +8,13 @@ export const urls = [
     {
         id: 2,
         url: "https://i.postimg.cc/DZM7y921/2.png",
-        web: "karashop.netlify.app/",
+        web: "https://karashop.netlify.app/",
         git: "https://github.com/adityaaryanm4/ecommerce"
     },
     {
         id: 3,
         url: "https://i.postimg.cc/BvMXG7RG/3.png",
-        web: "buttlly.herokuapp.com/",
+        web: "https://buttlly.herokuapp.com/",
         git: "https://github.com/adityaaryanm4/url-shortener"
     },
 ]
