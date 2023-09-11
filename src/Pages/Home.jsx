@@ -19,7 +19,7 @@ const Home = () => {
                     <h1>Hi, I'm <span className="red">Aditya</span></h1>
                     <p>A Full Stack Developer</p>
                 </div>
-                <a className="dndCVbtn" href="./file/aditya aryan.pdf" download>Download CV</a>
+                <a className="dndCVbtn" href="./file/aditya_aryan.pdf" download>Download CV</a>
             </div>
         </div>
     )

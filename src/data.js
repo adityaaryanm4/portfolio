@@ -1,22 +1,16 @@
 export const urls = [
     {
         id: 1,
-        url: "https://i.postimg.cc/GpK2rs0T/1.png",
-        web: "https://devrooms.netlify.app/",
-        git: "https://github.com/adityaaryanm4/dev__rooms"
+        url: "https://i.postimg.cc/pLMs297K/1.png",
+        web: "https://adi-dalle.netlify.app/",
+        git: "https://github.com/adityaaryanm4/dalle_clone_2_client"
     },
     {
         id: 2,
-        url: "https://i.postimg.cc/DZM7y921/2.png",
-        web: "karashop.netlify.app/",
-        git: "https://github.com/adityaaryanm4/ecommerce"
-    },
-    {
-        id: 3,
-        url: "https://i.postimg.cc/BvMXG7RG/3.png",
-        web: "buttlly.herokuapp.com/",
-        git: "https://github.com/adityaaryanm4/url-shortener"
-    },
+        url: "https://i.postimg.cc/YqMJ3sr5/2.png",
+        web: "https://url-shortener-adi.netlify.app/",
+        git: "https://github.com/adityaaryanm4/url-shortener-project"
+    }
 ]
 
 export const skillUrls = [
